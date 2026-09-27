@@ -45,6 +45,7 @@ export class ContactPage extends BasePage {
 
   async navigate() {
     await super.navigate('/contact');
+    await this.firstNameInput.waitFor();
   }
 
   async fillForm(data: ContactMessageData) {
